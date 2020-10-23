@@ -2,10 +2,10 @@ use Mix.Config
 
 # Configure your database
 config :cars, Cars.Repo,
-  username: "postgres",
-  password: "hainover1",
-  database: "cars_dev",
-  hostname: "localhost",
+  username: System.get_env("PG_USERNAME") ,
+  password: System.get_env("PG_PASSWORD"),
+  database: System.get_env("PG_DATABASE"),
+  hostname: System.get_env("PG_HOST"),
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
