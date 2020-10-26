@@ -11,7 +11,6 @@ defmodule CarsWeb.BrandView do
   end
 
   def render("brand.json", %{brand: brand}) do
-    %{id: brand.id,
-      description: brand.description}
+    %{id: brand.id, description: brand.description}
   end
 end
