@@ -6,6 +6,13 @@ defmodule CarsWeb.FallbackController do
   """
   use CarsWeb, :controller
 
+  def call(conn, _) do
+    conn
+    |> put_status(:unprocessable_entity)
+    |> put_view(CarsWeb.ErrorView)
+    |> render(:"422")
+  end
+
   # This clause is an example of how to handle resources that cannot be found.
   def call(conn, {:error, :not_found}) do
     conn

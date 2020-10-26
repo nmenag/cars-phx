@@ -2,7 +2,7 @@ use Mix.Config
 
 # Configure your database
 config :cars, Cars.Repo,
-  username: System.get_env("PG_USERNAME") ,
+  username: System.get_env("PG_USERNAME"),
   password: System.get_env("PG_PASSWORD"),
   database: System.get_env("PG_DATABASE"),
   hostname: System.get_env("PG_HOST"),
